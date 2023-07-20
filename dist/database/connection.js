@@ -25,7 +25,7 @@ var dbSettings = {
   options: {
     encrypt: false,
     // for azure
-    trustServerCertificate: true // change to true for local dev / self-signed certs
+    trustServerCertificate: false // change to true for local dev / self-signed certs
   }
 };
 exports.dbSettings = dbSettings;
