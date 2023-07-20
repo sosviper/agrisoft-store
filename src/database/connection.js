@@ -12,6 +12,8 @@ export const dbSettings = {
     idleTimeoutMillis: 30000
   },
   options: {
+    trustedconnection: false,
+    enableArithAbort : true,
     encrypt: false, // for azure
     trustServerCertificate: true, // change to true for local dev / self-signed certs
   },
