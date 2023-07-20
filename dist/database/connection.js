@@ -28,9 +28,9 @@ var dbSettings = {
     idleTimeoutMillis: 30000
   },
   options: {
-    encrypt: true,
+    encrypt: false,
     // for azure
-    trustServerCertificate: false // change to true for local dev / self-signed certs
+    trustServerCertificate: true // change to true for local dev / self-signed certs
   }
 };
 exports.dbSettings = dbSettings;
