@@ -20,10 +20,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 var dbSettings = {
   user: _config["default"].dbUser,
   password: _config["default"].dbPassword,
-  server: _config["default"].dbServer,
   database: _config["default"].dbDatabase,
+  server: _config["default"].dbServer,
+  pool: {
+    max: 10,
+    min: 0,
+    idleTimeoutMillis: 30000
+  },
   options: {
-    encrypt: false,
+    encrypt: true,
     // for azure
     trustServerCertificate: false // change to true for local dev / self-signed certs
   }

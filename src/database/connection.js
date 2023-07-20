@@ -4,11 +4,16 @@ import config from "../config";
 export const dbSettings = {
   user: config.dbUser,
   password: config.dbPassword,
-  server: config.dbServer,
   database: config.dbDatabase,
+  server: config.dbServer,
+  pool: {
+    max: 10,
+    min: 0,
+    idleTimeoutMillis: 30000
+  },
   options: {
     encrypt: true, // for azure
-    trustServerCertificate: true, // change to true for local dev / self-signed certs
+    trustServerCertificate: false, // change to true for local dev / self-signed certs
   },
 };
 
