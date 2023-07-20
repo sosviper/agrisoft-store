@@ -28,7 +28,7 @@ var dbSettings = {
     idleTimeoutMillis: 30000
   },
   options: {
-    trustedconnection: false,
+    trustedconnection: true,
     enableArithAbort: true,
     encrypt: false,
     // for azure
